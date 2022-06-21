@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Reem+Kufi:wght@700&display=swap');
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+-webkit-box-sizing: border-box;
+
+}
+:root{
+    --bodyColor:linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    --navsColor:#4A148C;
+    --fontColor:white;
+    --active:#880E4F;
+    --tableColor:#BDBDBD;
+    --h1Color:#880E4F;
+    --borderBottom:#B71C1C;
+}
+
+body{
+box-sizing: border-box;
+background-color: var(--active);
+background: var(--bodyColor);
+color: white;
+}
+.container{
+    width: 80%;
+}
+
+
+/* home.html */
+/* header */
+.header{
+padding: 10px;
+}
+.header .navbar{
+display: flex;
+justify-content: center;
+padding: 10px;
+color: var(--fontColor);
+flex-wrap: nowrap;
+
+}
+
+.header .navbar h1{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Reem Kufi', sans-serif;
+    letter-spacing: 2px;
+    color: var(--h1Color);
+}
+.header .navbar p{
+padding: 10px;
+margin-right: 30px;
+}
+.header .navbar ul{
+    display: flex;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    margin-right: 10px;
+}
+.header .navbar ul li {
+    margin-right: 10px;
+    padding: 10px;
+
+}
+
+.header .navbar ul li a:hover {
+    background-color: var(--active);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.header .navbar ul li a{
+    color: var(--fontColor);
+    text-decoration: none;
+    padding: 10px;
+
+}
+.active{
+    border-radius: 5px;
+    background-color: var(--active);
+}
+/* main */
+.main{
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    padding: 50px;
+}
+.mainContent{
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+align-items: center;
+justify-content: center;
+}
+.mainContent p{
+    margin-bottom: 10px;
+}
+
+.main .mainContent .mainImg img{
+    border-radius: 5px;
+}
+.mainTable{
+    text-align: center;
+    border-spacing: 0;
+
+}
+.mainTable thead{
+    background-color: #000000;
+    color: white;
+}
+.mainTable thead th{
+    padding: 10px;
+    border: 1px solid gray;
+}
+.mainTable tbody{
+    background-color: var(--tableColor) !important;
+}
+.mainTable tbody td{
+    border: 1px solid floralwhite;
+    color: black;
+
+}
+
+
+
+/* fotter */
+.fotter{
+    color: white;
+}
+.copy{
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* about html */
+
+.mainAbout{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    gap: 40px;
+}
+.mainAbout p{
+    line-height: 30px;
+}
+
+.company h1{
+    margin-bottom: 15px;
+    color: var(--h1Color);
+    position: relative;
+}
+
+.company h1::before{
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    bottom: 0;
+    right: 0;
+    background-color: var(--borderBottom);
+
+}
+.company h1:hover::before{
+    width: 100px;
+    transition: 0.8s;
+}
+.mainAbout{
+    display: flex;
+    justify-content:center;
+    word-spacing: 5px;
+}
+.container div{
+    margin-bottom: 30px;
+}
+
+.mainAbout h2{
+    margin-bottom: 15px;
+    color: var(--h1Color);
+    position: relative;
+}
+
+.mainAbout h2::before{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    bottom: 0;
+    right: 0;
+    background-color: var(--borderBottom);
+
+}
+.mainAbout h2:hover::before{
+    width: 60px;
+    transition: 0.8s;
+}
+
+.project div{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: rgb(189, 182, 182);
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+}
+.services div{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: rgb(189, 182, 182);
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+}
+.services div img {
+    max-width: 270px;
+    height: 250px;
+    margin-right:auto ;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.cards img{
+    width: 400px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.content_us,.content_where{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+/* product html */
+
+
+
+
+.mainTableProduct{
+    text-align: center;
+    border-spacing: 0;
+    width: 600px;
+
+}
+.mainTableProduct thead{
+    background-color: #000000;
+    color: white;
+}
+.mainTableProduct thead th{
+    padding: 10px;
+    border: 1px solid gray;
+}
+.mainTableProduct tbody{
+    background-color: var(--tableColor) !important;
+}
+.mainTableProduct tbody td{
+    border: 1px solid floralwhite;
+    color: black;
+
+}
+.productInforamtion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardInforamtion{
+    width: 400px;
+    padding: 50px;
+    background-color: var(--tableColor);
+    border-radius: 20px;
+    color: black;
+}
+.cardInforamtion ul li::marker{
+    color: var(--h1Color);
+    font-size: 30px;
+}
+.cardInforamtion h2{
+    color: var(--h1Color);
+}
+#resultMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+#resultMain div {
+    padding: 40px;
+    background-color: var(--tableColor);
+    border-radius: 10px;
+}
+#resultMain div h2{
+    margin-bottom: 20px;
+    color: var(--h1Color);
+}
+#resultMain div ul{
+    list-style-type: none;
+}
+
+#resultMain div ul li{
+    margin-bottom: 10px;
+    color: black;
+}
+
+
+@media (max-width: 776px){
+    .h1_div{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+    .header .navbar{
+        flex-wrap: wrap;
+
+    }
+    .header .navbar ul{
+        flex-wrap: wrap;
+    }
+    .header .navbar ul li{
+        width: 100%;
+        text-align: center;
+    }
+    .project div{
+        flex-wrap: wrap;
+    }
+    .services div{
+        flex-wrap: wrap;
+    }
+    .services div img{
+        margin: 0;
+    }
+    .content_us,.content_where{
+        flex-wrap: wrap;
+    }
+    .cards img{
+        width: 250px;
+        height:250px;
+    }
+    .active{
+        width: 100%;
+    }
+    .copy{
+        font-size: 10px;
+    }
+    .services div img, .project div img{
+        max-width: 200px;
+    }
+    .mainTableProduct{
+        width: 300px;
+        font-size: 10px;
+    }
+    .header .navbar ul li a{
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+    .cardInforamtion{
+        width: 300px;
+    }
+    .mainTable{
+        font-size: 15px;
+    }
+
+}
+@media (min-width: 776px)and (max-width: 900px){
+    .content_us,.content_where{
+        flex-wrap: wrap;
+    }
+    .cards img{
+        width: 400px;
+        height: 400px;
+    }
+}
+canvas{
+    /*prevent interaction with the canvas*/
+    pointer-events:none;
+    background-color: white;
+}

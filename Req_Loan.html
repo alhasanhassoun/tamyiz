@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقديم قرض</title>
+    <link rel="stylesheet" href="css/styles.css">
+ </head>
+ <body dir="rtl" onload="createCaptcha()">
+    <header class="header">
+        <nav class="navbar">
+          <div class="h1_div">
+            <h1>تميز</h1>
+          </div>
+                <ul>
+                    <li><a href="index.html" >الصفحة الرئيسية</a></li>
+                    <li><a  href="aboutus.html">من نحن</a></li>
+                    <li><a  href="products.html">منجاتنا وخدماتنا</a></li>
+                    <li><a class="active" href="Req_Loan.html">طلب قرض</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main"> 
+        
+            <form name="myform" action="result.html" id="form1" onsubmit="validateCaptcha()">
+            <p>  الاسم الكامل: </p> 
+            <input type="text" name="fullname" id="nameError" placeholder="ادخل اسمك الكامل" onchange="chkName()" value="">
+            <p> الرقم الوطني  : </p>
+            <input type = "number" name ="national number" id="number" placeholder="ادخل رقمك الوطني" onchange="chknumber()" />  
+            <p> تاريخ الميلاد : </p>
+            <input type="date" name="data of birth" id="date" onchange="dateOfBirth();"/>  
+            <p> رقم الموبايل : </p>
+            <input type="tel" name="mobile " id="phone" placeholder="Example:00963 95.."  onchange="chkPhone();"  /> 
+            <p> الايميل : </p>
+            <input type="email" name="email" placeholder="email@example.com" id="email" onchange="chkemail();" /> 
+            <p> قيمة القرض : </p>
+            <input type="number" min="1000000" max="10000000" name="loan amount" id="amount" onchange="chkamount()"  />  
+            <p> نوع القرض المطلوب : </p>
+            <select name = "the type of loan required" id="typeOfLoan" onchange="loan();">        
+            <option value="حساب توفير"> حساب التوفير </option>  
+            <option value="الحساب الجاري"> الحساب الجاري </option>
+            <option value="القرض التعليمي"> القرض التعليمي </option>
+            <option value="القرض السكني"> القرض السكني </option>
+            <option value="القرض التجاري"> القرض التجاري </option>
+            <option value="القرض الزراعي"> القرض الزراعي </option> 
+            <option value="قرض النقل"> قرض النقل </option>
+            <option value="قرض الورشات"> قرض الورشات </option>
+            </select>
+            <p> اختيار عدد سنوات القرض : </p>
+            <input  type ="radio"  name ="number of loan years" value = "3" onchange="yearOfLoan(3)"/> 3 
+            <input  type ="radio"  name ="number of loan years" value = "5" onchange="yearOfLoan(5)"/> 5 
+            <input  type ="radio"  name ="number of loan years" value = "10" onchange="yearOfLoan(10)"/> 10 
+            <input  type ="radio"  name ="number of loan years" value = "15" onchange="yearOfLoan(15)"/> 15 
+            <input  type ="radio"  name ="number of loan years" value = "20" onchange="yearOfLoan(20)"/> 20  
+            <p> طريقة تسديد الدفعات </p>
+            <select name = "Payment method" id="payment" onchange="typePayment()">
+            <option value="شهرية"> شهرية </option>  
+            <option value="ربعية"> ربعية </option>
+            <option value="سنوية"> سنوية </option>
+            </select>
+            <div id="captcha">
+            </div>
+            <input type="text" placeholder="ادخل الرمز" id="cpatchaTextBox"/>
+            <p> تثبيت و ارسال او ازالة : </p>
+            <input  type ="reset"  value = "Reset Form"/> 
+            <input  type ="submit" value = "Submit Form" onclick="return myform()"/> 
+           
+            </form>     
+   </main>
+              
+
+
+    <footer class="fotter">
+        <div dir="ltr" class="copy">
+            <p> © 2021 Copyright:كل الحقوق محفوظة لطلاب الجامعة الافتراضية السورية</p>
+        </div>
+    </footer>
+    <script src="js/myFuncrion.js"> </script>
+</body>
+</html>
